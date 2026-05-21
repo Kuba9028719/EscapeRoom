@@ -1,20 +1,73 @@
-CREATE TABLE riddles (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    riddle VARCHAR(255) NOT NULL,
-    answer VARCHAR(100) NOT NULL,
-    hint VARCHAR(255),
-    roomId INT NOT NULL
-);
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: May 21, 2026 at 02:48 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
--- Let op, dit is een voorbeeld!
-INSERT INTO riddles (riddle, answer, hint, roomId)
-VALUES
-    ('Welke Pokémon is nummer 25 in de Pokédex?', 'Pikachu', 'Het is de mascotte van Pokémon.', 1),
-    ('Wat is het type van Charmander?', 'Vuur', 'Denk aan zijn vlammende staart.', 1),
-    ('Hoe heet de evolutie van Bulbasaur?', 'Ivysaur', 'Het zit tussen Bulbasaur en Venusaur.', 1),
-    ('Wat gebeurt er als Magikarp level 20 bereikt?', 'Gyarados', 'Van nutteloos naar legendarisch!', 2),
-    ('Wat is super effectief tegen een water-type Pokémon?', 'Gras', 'Denk aan elementaire logica: wat groeit in water?', 2),
-    ('Welke legendarische vogel hoort bij het element ijs?', 'Articuno', 'Zijn naam begint met "Arti...".', 2),
-    ('Wat is de naam van de professor in de eerste Pokémon-games?', 'Professor Oak', 'Hij deelt je eerste Pokémon uit.', 3),
-    ('Welke kleur heeft shiny Charizard?', 'Zwart', 'Anders dan zijn originele oranje kleur.', 3),
-    ('Wat gebruik je om een wilde Pokémon te vangen?', 'Pokéball', 'Je gooit het naar een Pokémon.', 3);
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `escape-room`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `riddles`
+--
+
+CREATE TABLE `riddles` (
+  `id` int(11) NOT NULL,
+  `riddle` varchar(255) NOT NULL,
+  `answer` varchar(100) NOT NULL,
+  `hint` varchar(255) DEFAULT NULL,
+  `roomId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `riddles`
+--
+
+INSERT INTO `riddles` (`id`, `riddle`, `answer`, `hint`, `roomId`) VALUES
+(1, 'Welke planeet staat bekend als de rode planeet?', 'Mars', 'De planeet heeft een rode kleur.', 1),
+(2, 'Hoe heet ons sterrenstelsel?', 'Melkweg', 'Het bevat de aarde en miljarden sterren.', 1),
+(3, 'Wat dragen astronauten in de ruimte?', 'Ruimtepak', 'Het beschermt tegen de ruimte.', 1),
+(4, 'Ik beschermde ridders tijdens gevechten en droeg vaak een vizier. Wat ben ik?', 'Helm', 'Het beschermt het hoofd', 2),
+(5, 'Welke middeleeuwse straf werd vaak uitgevoerd op een plein?', 'Executie', 'Vaak openbaar zodat iedereen het zag.', 2),
+(6, 'Welke ziekte doodde miljoenen mensen in de middeleeuwen?', 'Pest', 'Ook bekend als de Zwarte Dood.', 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `riddles`
+--
+ALTER TABLE `riddles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `riddles`
+--
+ALTER TABLE `riddles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
