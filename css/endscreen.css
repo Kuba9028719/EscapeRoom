@@ -1,0 +1,117 @@
+
+
+.end-screen {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 40px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.end-screen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(7, 9, 29, 0.8);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* De titel krijgt extra styling voor win/verlies-varianten. */
+
+.title {
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 5.5rem;
+  text-shadow: 6px 6px 0px #000000;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.win { 
+  color: #00ff9d; 
+}
+
+.loss { 
+  color: #ff4d6b; 
+}
+
+.subtitle {
+  font-size: 2.3rem;
+  color: #cccccc;
+  margin-bottom: 40px;
+}
+
+.team-info {
+  font-size: 2rem;
+  margin: 30px 0;
+  color: #a0d8ff;
+}
+
+/* Toon teamnaam duidelijk onder de hoofdtekst. */
+
+.time {
+  font-size: 3rem;
+  background: rgba(255,255,255,0.1);
+  padding: 20px 60px;
+  border-radius: 16px;
+  display: inline-block;
+  margin: 25px 0;
+  border: 2px solid rgba(0, 255, 157, 0.4);
+}
+
+.message {
+  font-size: 1.7rem;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  line-height: 1.4;
+  color: #e0e0e0;
+}
+
+.buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Stijl voor de twee grote actieknoppen onderaan. */
+
+button {
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 2.1rem;
+  padding: 18px 50px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 240px;
+}
+
+.btn-home {
+  background: #4a6bff;
+  color: white;
+}
+
+.btn-replay {
+  background: #00cc88;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
